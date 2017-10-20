@@ -28,11 +28,6 @@ public class Gear extends Hopper
         Flap.set(DoubleSolenoid.Value.kOff);
         Claw.set(DoubleSolenoid.Value.kOff);
 	disabled = true;
-    }
-
-	public void fire() {
-        if (firing || !forkInfiringPosition()) {
-            return;
         }
         new Thread(new Runnable() {
             public void run() {
@@ -51,9 +46,6 @@ public class Gear extends Hopper
                 }
                 returnTrigger();
                 firing = false;
-                winchTimer.start();
-                drawWinch();
-                ++shotCount;
             }
         }, "TRIGGER").start();
     }
