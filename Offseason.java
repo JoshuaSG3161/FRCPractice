@@ -15,8 +15,6 @@ public class GearMech {
 			private final DoubleSoleniod claw = new DoubleSolenoid(1, 2);
 			private final DoubleSolonoid flap = new DoubelSolenoid(3, 4);
 
-			
-
 			{
 		        flap.set(DoubleSolenoid.Value.kOff);
 		        claw.set(DoubleSolenoid.Value.kOff);
