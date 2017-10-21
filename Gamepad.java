@@ -1,4 +1,6 @@
   /**For Operator GamePad and Controls
+  *This is to be inputed into the Robot.java file for the 2017 code. This is just part of 
+  *Code that needs to be added on.
   */
   
   import edu.wpi.first.wpilibj.DoubleSolenoid;
