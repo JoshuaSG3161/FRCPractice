@@ -12,8 +12,8 @@ public class GearMech {
 			/**Classifying where the solenoids will be in PCM
 		    */
 			
-			private final DoubleSoleniod claw = new DoubleSolenoid(1, 2);
-			private final DoubleSolonoid flap = new DoubelSolenoid(3, 4);
+			public final DoubleSoleniod claw = new DoubleSolenoid(1, 2);
+			public final DoubleSolonoid flap = new DoubelSolenoid(3, 4);
 
 			{
 		        flap.set(DoubleSolenoid.Value.kOff);
@@ -24,14 +24,14 @@ public class GearMech {
 		    /**
 		     * Release the Falp
 		     */
-		    private void pullflap() {
+		    public void pullflap() {
 		        flap.set(DoubleSolenoid.Value.kForward);
 		    }
 
 		    /**
 		     * Set the Flap back in
 		     */
-		    private void returnflap() {
+		    public void returnflap() {
 		        flap.set(DoubleSolenoid.Value.kReverse);
 		    }
 
