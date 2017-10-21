@@ -8,23 +8,24 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 	 */
 
 public class GearMech {
+	 
+			public GearMech (DoubleSolenoid claw, DoubleSolenoid flap) {
+			this.claw = claw;
+			this.flap = flap;
+			flap.set(DoubleSolenoid.Value.kOff);
+		    claw.set(DoubleSolenoid.Value.kOff);
+			}
 
 			/**Classifying where the solenoids will be in PCM
 		    */
 			
-			public final DoubleSoleniod claw = new DoubleSolenoid(1, 2);
-			public final DoubleSolonoid flap = new DoubelSolenoid(3, 4);
-
-			{
-		        flap.set(DoubleSolenoid.Value.kOff);
-		        claw.set(DoubleSolenoid.Value.kOff);
-			boolean disabled = true;
-			}
+			private final claw;
+			private final flap;
 
 		    /**
 		     * Release the Falp
 		     */
-		    public void pullflap() {
+			public void pullflap() {
 		        flap.set(DoubleSolenoid.Value.kForward);
 		    }
 
