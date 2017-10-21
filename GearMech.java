@@ -1,4 +1,4 @@
-package offseaon.java;
+package offseason.java;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 
