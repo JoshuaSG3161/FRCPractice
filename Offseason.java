@@ -1,3 +1,6 @@
+/**My computer is having trouble using the import function for the WPI libraies so that might be wrong.
+*/
+
 package offseaon.java;
 
 public class Offseaon {
