@@ -1,62 +1,71 @@
-package org.usfirst.frc.team3161.robot;
+package offseaon.java;
 
-import edu.wpi.first.wpilibj.DoubleSolenoid;
+public class Offseaon {
 
-/**Making new class and indetifying new Varibles
-*/
+/** This is for the 2017 code package. Thiscode is not on github
+ * I randomly created a package and when i know what the package name is, 
+ * i will fix it then
+ */
+	package org.usfirst.frc.team3161.robot;
 
-public class Gear extends Hopper {
-	
-  private static final Gear INSTANCE = new Gear();
-  
-  /**Making The Pneumatics start in rest mode
-  */
-  
-  private volatile boolean out = false;
-  private volatile boolean in = flase;
+	import edu.wpi.first.wpilibj.DoubleSolenoid;
 
-	/**Classifying where the solenoids will be in PCM
-    */
-	
-	private final DoubleSoleniod Claw = new DoubleSolenoid(1, 2);
-	private final DoubleSolonoid Flap = new DoubelSolenoid(3, 4);
 
-	public static Gear getInsatnce() {
-		return INSTANCE;
-}
+	/**Making new class and indetifying new Varibles
+	*/
 
-	public void disableAll() {
-        Flap.set(DoubleSolenoid.Value.kOff);
-        Claw.set(DoubleSolenoid.Value.kOff);
-	disabled = true;
+	public class Gear extends Hopper {
+		
+	  private static final Gear INSTANCE = new Gear();
+	  
+	  /**Making The Pneumatics start in rest mode
+	  */
+	  
+	  private volatile boolean out = false;
+	  private volatile boolean in = false;
+
+		/**Classifying where the solenoids will be in PCM
+	    */
+		
+		private final DoubleSoleniod Claw = new DoubleSolenoid(1, 2);
+		private final DoubleSolonoid Flap = new DoubelSolenoid(3, 4);
+
+		public static Gear getInsatnce() {
+			return INSTANCE;
 	}
 
-    /**
-     * Release the Falp
-     */
-    private void pullFlap() {
-        Flap.set(DoubleSolenoid.Value.kForward);
-    }
+		public void disableAll() {
+	        Flap.set(DoubleSolenoid.Value.kOff);
+	        Claw.set(DoubleSolenoid.Value.kOff);
+		boolean disabled = true;
+		}
 
-    /**
-     * Set the Flap back in
-     */
-    private void returnFlap() {
-        Flap.set(DoubleSolenoid.Value.kReverse);
-    }
+	    /**
+	     * Release the Falp
+	     */
+	    private void pullFlap() {
+	        Flap.set(DoubleSolenoid.Value.kForward);
+	    }
 
-    /**
-     * Open the Claw
-     */
-    public void openClaw() {
-        Claw.set(DoubleSolenoid.Value.kForward);
-    }
+	    /**
+	     * Set the Flap back in
+	     */
+	    private void returnFlap() {
+	        Flap.set(DoubleSolenoid.Value.kReverse);
+	    }
 
-    /**
-     * Close the Claw
-     */
-    public void closeClaw() {
-        Claw.set(DoubleSolenoid.Value.kReverse);
-    }
-	
-}
+	    /**
+	     * Open the Claw
+	     */
+	    public void openClaw() {
+	        Claw.set(DoubleSolenoid.Value.kForward);
+	    }
+
+	    /**
+	     * Close the Claw
+	     */
+	    public void closeClaw() {
+	        Claw.set(DoubleSolenoid.Value.kReverse);
+	    }
+		
+	}
