@@ -15,10 +15,12 @@ public class GearMech {
 			flap.set(DoubleSolenoid.Value.kOff);
 		    claw.set(DoubleSolenoid.Value.kOff);
 			}
-			
-			private final claw();
-			private final flap();
 
+			/**Classifying where the solenoids will be in PCM
+		    */
+			
+			private final DoubleSolenoid claw;
+			private final DoubleSolenoid flap;
 		    /**
 		     * Release the Falp
 		     */
