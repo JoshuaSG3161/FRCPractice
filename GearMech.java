@@ -2,14 +2,17 @@ package offseason.java;
 
 import edu.wpi.first.wpilibj.DoubleSolenoid;
 
-	/** This is for the 2017 code package. Thiscode is not on github
+	/** This is for the 2017 code package. That code is not on Github
 	 * I randomly created a package and when i know what the package name is, 
 	 * i will fix it then
 	 */
 
 public class GearMech {
+	
+			private final DoubleSolenoid claw;
+			private final DoubleSolenoid flap;
 
-			public GearMech (DoubleSolenoid claw, DoubleSolenoid flap) {
+			public GearMech (DoubleSolenoid claw, DoubleSolenoid flap){
 			this.claw = claw;
 			this.flap = flap;
 			flap.set(DoubleSolenoid.Value.kOff);
@@ -19,10 +22,8 @@ public class GearMech {
 			/**Classifying where the solenoids will be in PCM
 		    */
 			
-			private final DoubleSolenoid claw;
-			private final DoubleSolenoid flap;
 		    /**
-		     * Release the Falp
+		     * Release the flap
 		     */
 			public void pullflap() {
 		        flap.set(DoubleSolenoid.Value.kForward);
