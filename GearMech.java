@@ -8,7 +8,7 @@ import edu.wpi.first.wpilibj.DoubleSolenoid;
 	 */
 
 public class GearMech {
-	 
+
 			public GearMech (DoubleSolenoid claw, DoubleSolenoid flap) {
 			this.claw = claw;
 			this.flap = flap;
@@ -19,8 +19,8 @@ public class GearMech {
 			/**Classifying where the solenoids will be in PCM
 		    */
 			
-			private final claw;
-			private final flap;
+			private final claw();
+			private final flap();
 
 		    /**
 		     * Release the Falp
