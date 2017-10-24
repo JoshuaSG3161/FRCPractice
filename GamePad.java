@@ -5,7 +5,7 @@
   
   import edu.wpi.first.wpilibj.DoubleSolenoid;
       
-       LogitechDualAction operatorPad = new LogitechDualAction(1, 50, TimeUnit.MILLISECONDS);
+       LogitechDualAction OperatorPad = new LogitechDualAction(1, 50, TimeUnit.MILLISECONDS);
        registerLifecycleComponent(operatorPad);
 
       
