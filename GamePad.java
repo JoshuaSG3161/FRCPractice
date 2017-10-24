@@ -4,10 +4,11 @@
   */
   
   import edu.wpi.first.wpilibj.DoubleSolenoid;
+  import ca.team3161.interfaces.GearMech;
       
        LogitechDualAction OperatorPad = new LogitechDualAction(1, 50, TimeUnit.MILLISECONDS);
        registerLifecycleComponent(operatorPad);
 
       
-      	OperatorPad.bind(LogitechButton.X, Claw::Claw);
-      	OperatorPad.bind(LogitechButton.B, Flap::Flap);
+      	OperatorPad.bind(LogitechButton.X, Claw);
+      	OperatorPad.bind(LogitechButton.B, Flap);
