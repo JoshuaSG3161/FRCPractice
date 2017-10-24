@@ -10,13 +10,15 @@
        registerLifecycleComponent(operatorPad);
 
       
-      	OperatorPad.bind(LogitechButton.X, claw);
-      	OperatorPad.bind(LogitechButton.B, flap);
+      	operatorPad.bind(LogitechButton.X, gearMech::openClaw);
+	operatorPad.bind(LogitechButton.X, gearMech::closeClaw);
+      	operatorPad.bind(LogitechButton.B, gearMech::openFlap);
+	operatorPad.bind(LogitechButton.B, gearMech::closeFlap);
 
 		
-		OperatorPad.bind(LogitechButton.X, PressType.PRESS, () -> claw.set(-1));
-		OperatorPad.bind(LogitechButton.X, PressType.RELEASE, () -> claw.set(0));
+		operatorPad.bind(LogitechButton.X, PressType.PRESS, () -> claw.set(-1));
+		operatorPad.bind(LogitechButton.X, PressType.RELEASE, () -> claw.set(0));
 
-		OperatorPad.bind(LogitechButton.B, PressType.PRESS, () -> flap.set(-1));
-		OperatorPad.bind(LogitechButton.B, PressType.RELEASE, () -> flap.set(0));
+		operatorPad.bind(LogitechButton.B, PressType.PRESS, () -> flap.set(-1));
+		operatorPad.bind(LogitechButton.B, PressType.RELEASE, () -> flap.set(0));
 
