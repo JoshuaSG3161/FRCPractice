@@ -1,4 +1,4 @@
-  /**For Operator GamePad and Controls
+/**For Operator GamePad and Controls
   *This is to be inputed into the Robot.java file for the 2017 code. This is just part of 
   *Code that needs to be added on.
   */
@@ -10,5 +10,13 @@
        registerLifecycleComponent(operatorPad);
 
       
-      	OperatorPad.bind(LogitechButton.X, Claw);
-      	OperatorPad.bind(LogitechButton.B, Flap);
+      	OperatorPad.bind(LogitechButton.X, claw);
+      	OperatorPad.bind(LogitechButton.B, flap);
+
+		
+		OperatorPad.bind(LogitechButton.X, PressType.PRESS, () -> claw.set(-1));
+		OperatorPad.bind(LogitechButton.X, PressType.RELEASE, () -> claw.set(0));
+
+		OperatorPad.bind(LogitechButton.B, PressType.PRESS, () -> flap.set(-1));
+		OperatorPad.bind(LogitechButton.B, PressType.RELEASE, () -> flap.set(0));
+
