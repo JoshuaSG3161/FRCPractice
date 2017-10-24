@@ -9,5 +9,5 @@
        registerLifecycleComponent(operatorPad);
 
       
-      	OperatorPad.bind(LogitechButton.X, Claw: :Claw);
-      	OperatorPad.bind(LogitechButton.B, Flap: :Flap);
+      	OperatorPad.bind(LogitechButton.X, Claw::Claw);
+      	OperatorPad.bind(LogitechButton.B, Flap::Flap);
